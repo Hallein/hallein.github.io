@@ -1,0 +1,345 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+	background-color: #e5e8e8;
+	color: #424949;
+}
+
+/*===== Header =====*/
+.header-a {
+	z-index: 100;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.5);	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.nav-a {
+	height: 70px;
+	background-color: #ebedef;
+}
+
+.title-a {
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	margin-left: 300px;
+}
+
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+/*====================*/
+
+/*===== Sidebar =====*/
+.sidebar-a {
+	position: fixed;
+	width: 280px;
+	top: 70px;
+	bottom: 0;
+	left: 0;
+	background-color: #689f38;
+	z-index: 90;
+	box-shadow: 3px 0 4px rgba(0,0,0,0.5);
+}
+
+.menu-a {
+	list-style-type: none;
+	padding: 24px 32px;
+	letter-spacing: 1px;
+	color: #FFF;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.menu-a li:nth-child(1) {
+	margin: 10px 0 32px 0;
+}
+
+.menu-a li:nth-child(n+2) {
+	margin: 32px 0;
+}
+
+.activo {
+	padding: 4px 0;
+	border-bottom: 3px solid #f1c40f;
+}
+/*====================*/
+
+/*===== Misc =====*/
+.main-a {
+	position: relative;
+	margin-left: 280px;
+	margin-top: 70px;
+	padding: 20px;
+}
+
+.carta {
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+	margin: 12px 0 12px 0;
+}
+
+.carta-title {
+	padding-bottom: 16px;
+	font-size: 20px;
+}
+
+.titulo {
+	font-size: 22px;
+	letter-spacing: 1px;
+}
+
+@media screen and (max-width: 767px){
+	.sidebar-a {
+		position: absolute;
+		display: none;
+		left: -280px;
+	}
+
+	.main-a {
+		margin-left: 0px;
+	}
+
+	.title-a {
+		margin-left: 0;
+	}
+}
+/*====================*/
+
+/*===== Estanque =====*/
+.row-estanque {
+	width:100%;
+}
+
+.estanque {
+	height: 300px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+	background-color: #757575;
+}
+
+.estanque-control {
+	margin: 0;
+	height: 300px;
+	background-color: #fff;
+	color: #4e342e;
+	border: 2px solid  #455a64; 
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+	letter-spacing: 1px;
+}
+
+.control {
+	height: 120px;
+}
+
+.control-entrada {
+	/*background-color: #9c27b0;*/
+}
+
+.control-salida {
+	/*background-color: #f57c00;*/
+}
+
+.switch-text {
+	font-size: 22px;
+	display: inline-block;
+	margin-left: 8px;
+}
+
+.switch-control {
+
+}
+
+.estanque-control hr {
+	 border: 0; 
+	 height: 1px; 
+	 margin: 0 0 8px 0;
+	 background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+@media screen and (max-width: 767px){
+	.estanque {
+		margin-bottom: 12px;
+		height: 200px;
+	}
+
+	.estanque-control {
+
+	}
+
+	.switch-text {
+		font-size: 16px;
+	}
+
+	.control:nth-child(1) {
+		margin-bottom: 12px;
+	}
+}
+
+/*====================*/
+
+/*===== Caudales de flujo de agua =====*/
+.flujo {
+	height: 200px;	
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+}
+
+.flujo-e {
+	background-color: #d32f2f;
+}
+
+.flujo-s {
+	background-color: #fbc02d;	
+}
+
+@media screen and (max-width: 767px){
+	
+}
+/*====================*/
+
+/*===== Sensores de Humedad =====*/
+.humedad {
+	padding: 8px;
+	min-height: 200px;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+}
+
+.humedad-nivel {
+	background-color: #3e2723;	
+	height: 260px;
+}
+
+.humedad-hoja {
+	padding: 12px;
+}
+
+.humedad-text-contenedor {
+	height: 30px;	
+}
+
+.humedad-text {
+	color: #efefef;
+	font-size: 22px;
+}
+
+.humedad-grafico {
+	height: 260px;
+}
+
+.humedad-grafico-1 {
+	background-color: #74c540;	
+}
+
+.humedad-grafico-2 {
+	background-color: #867e26;	
+}
+
+.humedad-grafico-3 {
+	background-color: #ee9814;	
+}
+
+.humedad-grafico-4 {
+	background-color: #8a3604;	
+}
+
+.hoja-1 {
+	color: #74c540;
+}
+
+.hoja-2 {
+	color: #867e26;
+}
+
+.hoja-3 {
+	color: #ee9814;
+}
+
+.hoja-4 {
+	color: #8a3604;
+}
+
+.hoja {
+	max-width:100%;
+}
+
+.porcentaje-hoja {
+	font-size: 72px;
+}
+
+@media screen and (max-width: 767px){
+	.humedad-text {
+		font-size: 20px;
+	}
+
+	.porcentaje-hoja {
+		font-size: 60px;
+	}
+
+	.humedad-nivel {
+		margin-bottom: 12px;
+		height: auto;
+	}
+
+	.humedad-grafico {
+		height: auto;
+	}
+
+	.hoja {
+		
+	}
+}
+/*====================*/
+
+/*========== Temperatura ==========*/
+.temperatura {
+	height: 240px;	
+}
+
+.temperatura-dia {
+	background-color: #4fc3f7;
+}
+
+.temperatura-noche {
+	background-color: #212f3c;
+}
+
+.texto-temperatura {
+	font-size: 60px;
+	color: #FFF;
+}
+
+
+
+/*====================*/
+
+/*TESTING*/
+.nubes {
+	height: 240px;	
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+	background-color: #4fc3f7;
+	position: relative;
+}
+
+.nube-1 {
+	position: absolute;
+	bottom: 0;
+}
+
+.nube-2 {
+	position: absolute;
+	bottom: 0;
+}
+
+.nube-3 {
+	position: absolute;
+	bottom: 0;
+}

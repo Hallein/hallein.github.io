@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Sistema de Control Remoto</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/flexboxgrid.min.css">
+	<link rel="stylesheet" href="css/estanque.css">
+	<link rel="stylesheet" href="css/switch.css">
+	<link rel="stylesheet" href="css/agua.css">
+	<link rel="stylesheet" href="css/loader.css">
+	<link rel="stylesheet" href="css/termometro.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700"> 
+</head>
+<body>
+
+<!-- SVG agua -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
+	<symbol id="wave">
+		<path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"></path>
+		<path d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"></path>
+		<path d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"></path>
+		<path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"></path>
+	</symbol>
+</svg>
+
+	<!-- Header -->
+	<header class="header-a">
+
+			<div class="nav-a row center-xs start-sm middle-xs">
+				<div class="title-a">
+					SISTEMA DE CONTROL REMOTO
+				</div>
+			</div>
+
+	</header>
+
+	<!-- Sidebar -->
+	<aside class="sidebar-a">
+		<ul class="menu-a">
+			<li><a href="estanque.html"><span class="activo">CONTROL DEL ESTANQUE</span></a></li>
+			<li><a href="humedad.html"><span>SENSORES DE HUMEDAD</span></a></li>
+			<li><a href="temperatura.html"><span>SENSOR DE TEMPERATURA</span></a></li>
+			<li><a href="camaras.html"><span>CONTROL DE CÁMARAS</span></a></li>
+		</ul>
+	</aside>
+
+	<main class="main-a">
+		<div class="main-contenedor">
+			
+			<!-- Estanque -->
+			<div class="row">
+				<div class="col-xs-12">
+
+					<div class="carta">
+
+						<div class="row center-xs">
+							<div class="carta-title col-xs">
+								<span class="titulo">Control del nivel del estanque</span>
+							</div>
+						</div>
+
+						<div class="row middle-xs">
+							<!-- Nivel del agua -->
+							<div class="col-xs-12 col-md-6 row-estanque">
+								<div class="estanque">
+									<!-- Agua -->
+									<div class="water-jar">
+										<div class="water-filling">
+											<div class="percentNum" id="count">0</div>
+											<div class="percentB">%</div>
+										</div>
+										<div id="water" class="water">
+									    	<svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+									      		<use xlink:href="#wave"></use>
+									    	</svg>
+									    	<svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+									      		<use xlink:href="#wave"></use>
+									    	</svg>
+									  	</div>
+									</div>
+
+								</div>
+							</div>
+
+							<!-- Switch de control -->
+							<div class="col-xs-12 col-md-6 row-estanque">
+								<div class="estanque-control carta">
+									<div class="row middle-xs center-xs control control-entrada">
+										<div class="col-xs-3 col-sm-3">										
+											<input type="checkbox" id="switch_entrada" onchange="compuertaEntrada(this)" class="cbx hidden switch-control"/>
+											<label for="switch_entrada" class="lbl"></label>			
+										</div>
+										<div class="col-xs-12 col-sm-9 first-xs last-sm">	
+											<span class="switch-text">Switch control compuerta de entrada</span>	
+										</div>							
+									</div>
+									<hr>
+									<div class="row middle-xs center-xs control control-salida">
+										<div class="col-xs-3 col-sm-3">										
+											<input type="checkbox" id="switch_salida" onchange="compuertaSalida(this)" class="cbx hidden switch-control"/>
+											<label for="switch_salida" class="lbl"></label>		
+										</div>
+										<div class="col-xs-12 col-sm-9 first-xs last-sm">	
+											<span class="switch-text">Switch control compuerta de salida</span>
+										</div>							
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- TESTING -->
+			
+			<!-- TESTING -->
+ 
+<!-- Flujos
+			<div class="row">
+
+				<div class="col-xs-12 col-md-6">
+					<div class="carta">
+
+						<div class="row center-xs">
+							<div class="carta-title col-xs">
+								<span class="titulo">Flujo de agua de entrada</span>
+							</div>
+						</div>
+
+						<div class="row middle-xs">
+							<div class="col-xs-12">
+								<div class="flujo flujo-e">
+									Conducto de agua
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-md-6">
+					<div class="carta">
+
+						<div class="row center-xs">
+							<div class="carta-title col-xs">
+								<span class="titulo">Flujo de agua de salida</span>
+							</div>
+						</div>
+
+						<div class="row middle-xs">
+							<div class="col-xs-12">
+								<div class="flujo flujo-s">
+									Conducto de agua
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+-->			
+		</div>
+	</main>
+
+	<!-- Loader -->
+	<div id="overlay-loader">
+		<div id="loader"></div>
+		<div id="loader-message"></div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/estanque.js"></script>
+
+</body>
+</html>

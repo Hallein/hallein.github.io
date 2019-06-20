@@ -1,0 +1,78 @@
+#estanque {
+	    width: 150px;
+	    height: 300px;
+	    background: #5d6d7e;
+	    overflow: hidden;
+	    backface-visibility: hidden;
+	    transform: translate3d(0, 0, 0);
+	    border: 2px solid #34495e;
+	    border-bottom-left-radius: 15px;
+	    border-bottom-right-radius: 15px;
+	    display: none;
+	}
+	#estanque .llenar {
+	    animation-name: Llenar;
+	    animation-iteration-count: 1;
+	    animation-timing-function: cubic-bezier(.2, .6, .7, .9);
+	    animation-duration: 4s;
+	    animation-fill-mode: forwards;
+	}
+
+	#estanque .vaciar {
+	    animation-name: Vaciar;
+	    animation-iteration-count: 1;
+	    animation-timing-function: cubic-bezier(.2, .6, .7, .9);
+	    animation-duration: 4s;
+	    animation-fill-mode: forwards;
+	}
+
+	#estanque #AnimacionAgua {
+	    animation-name: AnimacionAgua;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: linear;
+	    animation-duration: 1s;
+	    width:300px;
+	    height: 150px;
+	    fill: #04ACFF;
+	}
+
+	@keyframes Llenar {
+	    0% {
+	        transform: translate(0, 300px);
+	    }
+	    100% {
+	        transform: translate(0, 5px);
+	    }
+	}
+
+	@keyframes Vaciar {
+	    0% {
+	        transform: translate(0, 5px);
+	    }
+	    100% {
+	        transform: translate(0, 300px);
+	    }
+	}
+
+	@keyframes AnimacionAgua {
+	    0% {
+	        transform: translate(-150px, 0);
+	    }
+	    100% {
+	        transform: translate(0, 0);
+	    }
+	}
+
+	#on-btn{
+		background-color: green;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+	}
+
+	#off-btn{
+		background-color: red;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+	}

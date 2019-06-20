@@ -1,0 +1,166 @@
+.carta-contenedor {
+	position: relative;
+    display: inline-block;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    color: rgba(0,0,0, 0.87);
+    background: #fff;
+}
+
+/*========== Carta con un cuadrado y texto a la derecha ==========*/
+.cuadrado-header {
+	position: absolute;  
+	width: 86px;
+	height: 86px;
+	margin: -20px 15px 0 15px;
+    min-height: 86px;
+    border-radius: 3px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.cuadrado-header img {
+	position: absolute;
+    top: 0; 
+    bottom:0; 
+    left: 0; 
+    right:0;
+    margin: auto;
+	width: 56px;
+	height: 56px;
+}
+
+.cuadrado-content {
+	text-align: right;
+    padding: 15px 20px;
+    min-height: 86px;
+    line-height: 1.5em;
+    font-weight: 300;
+}
+
+.cuadrado-content h2 {
+	font-weight: 300;
+}
+/*==========================================================*/
+.rectangulo-header {
+	position: relative;
+	margin: -20px 15px 0 15px;
+    height: 74px;
+    border-radius: 3px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.rectangulo-header img, .rectangulo-header h2 {
+	position: relative;
+	display: inline-block;
+    color: #eeeeee;
+	font-weight: 300;
+	vertical-align: bottom;
+}
+
+.rectangulo-header img {	
+	position: relative;
+	top: 9px; 
+    bottom:0; 
+    left: 0;
+    margin: 0 10px;
+	width: 56px;
+	height: 56px;
+}
+
+.rectangulo-content {
+	text-align: left;
+    padding: 15px 20px 10px;
+    min-height: 60px;
+    font-size: 18px;
+	letter-spacing: 1px;
+    line-height: 2em;
+}
+/*============================================*/
+.carta-footer {
+    margin: 0 20px 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eeeeee;
+}
+
+/*========== Colores ==========*/
+.c-azul {	
+    background-color: #3498db;  
+}
+
+.c-turquesa {
+	background-color: #1abc9c;
+}
+
+.c-esmeralda {
+	background-color: #2ecc71;
+}
+
+.c-amatista {
+	background-color: #9b59b6;
+}
+
+.c-asfalto {
+	background-color: #34495e;
+}
+
+.c-verdemar {
+	background-color: #16a085;
+}
+
+.c-verde {
+	background-color: #27ae60;
+}
+
+.c-azuloscuro {
+	background-color: #2980b9;
+}
+
+.c-morado {
+	background-color: #8e44ad;
+}
+
+.c-medianoche {
+	background-color: #2c3e50;
+}
+
+.c-soleado {
+	background-color: #f1c40f;
+}
+
+.c-zanahoria {
+	background-color: #e67e22;
+}
+
+.c-rojo {
+	background-color: #e74c3c;
+}
+
+.c-nubes {
+	background-color: #ecf0f1;
+}
+
+.c-concreto {
+	background-color: #95a5a6;
+}
+
+.c-naranjo {
+	background-color: #f39c12;
+}
+
+.c-calabaza {
+	background-color: #d35400;
+}
+
+.c-granada {
+	background-color: #c0392b;
+}
+
+.c-plata {
+	background-color: #bdc3c7;
+}
+
+.c-gris {
+	background-color: #7f8c8d;
+}
